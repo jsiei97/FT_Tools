@@ -9,6 +9,8 @@ apt-get install \
     build-essential \
     vim vim-gtk exuberant-ctags cscope \
     git gitk \
+    qt4-qmake qt4-dev-tools \
+    valgrind \
     openjdk-7-jre || exit 12
 
 echo "Done..."
