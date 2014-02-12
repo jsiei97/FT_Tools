@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# xUbuntu development workplace
+
 apt-get update  || exit 10
 apt-get upgrade || exit 11
 
