@@ -15,6 +15,10 @@ sudo ./pkg.xUbuntu_desktop.sh
 My .vim and .vimrc
 * https://github.com/jsiei97/.vim
 
+To index the code for ctags and cscope I have a script called tag_view.sh
+run is the base of a fun tech project to index the project.
+* https://github.com/jsiei97/git_bin/blob/master/tag_view.sh
+
 == Arduino ==
 To download and install arduino in /opt/arduino, with a symlink in ~/bin.
 
