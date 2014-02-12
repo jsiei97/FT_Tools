@@ -1,0 +1,29 @@
+= FT_Tools =
+
+How to install the the tools needed for the Fun Tech projects.
+
+== Base ==
+Install a linux based PC with something like xUbuntu,
+then run the pkg.*.sh script to install the base.
+
+For xUbuntu 13.10 this would be
+<pre>
+sudo ./pkg.xUbuntu_desktop.sh
+</pre>
+
+== Arduino ==
+To download and install arduino in /opt/arduino, with a symlink in ~/bin.
+
+<pre>
+./install.arduino.sh
+</pre>
+
+== fritzing ==
+
+To download and install arduino in /opt/fritzing, with a symlink in ~/bin.
+
+<pre>
+./install.fritzing.sh
+</pre>
+
+
