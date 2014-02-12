@@ -11,6 +11,10 @@ For xUbuntu 13.10 this would be
 sudo ./pkg.xUbuntu_desktop.sh
 </pre>
 
+== vim ==
+My .vim and .vimrc
+* https://github.com/jsiei97/.vim
+
 == Arduino ==
 To download and install arduino in /opt/arduino, with a symlink in ~/bin.
 
@@ -18,7 +22,7 @@ To download and install arduino in /opt/arduino, with a symlink in ~/bin.
 ./install.arduino.sh
 </pre>
 
-== fritzing ==
+== Fritzing ==
 
 To download and install arduino in /opt/fritzing, with a symlink in ~/bin.
 
