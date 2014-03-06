@@ -23,11 +23,11 @@ get_git jsiei97 pubsubclient
 get_git jsiei97 FT_EDS
 get_git jsiei97 FT_Sensor
 get_git jsiei97 FT_Time
+get_git jsiei97 FT_Utils
 
 get_git jsiei97 FunTechHouse_Door
 get_git jsiei97 FunTechHouse_ElectricityMeter
 get_git jsiei97 FunTechHouse_Regulator
 get_git jsiei97 FunTechHouse_RoomTemperature
 get_git jsiei97 FunTechHouse_Thermostat
-
 
