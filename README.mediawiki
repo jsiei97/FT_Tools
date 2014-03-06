@@ -2,6 +2,15 @@
 
 How to install the the tools needed for the Fun Tech projects.
 
+First install FT_Tools:
+<pre>
+cd ~
+mkdir -p funtech/
+cd funtech/
+git clone git@github.com:jsiei97/FT_Tools.git
+</pre>
+
+
 == Base ==
 Install a linux based PC with something like xUbuntu,
 then run the pkg.*.sh script to install the base.
