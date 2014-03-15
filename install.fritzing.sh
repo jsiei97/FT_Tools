@@ -35,9 +35,10 @@ shortname=$(basename $name .tar.bz2)
 target="$PWD/$shortname/Fritzing"
 if [ -f "$target" ]
 then
-	echo ok
-	cd ~/bin || exit 40
-	ln -s $target fritzing || exit 41
+    echo ok
+    mkdir -p ~/bin/
+    cd ~/bin || exit 40
+    ln -s $target fritzing || exit 41
 fi
 
 echo "Done...."
