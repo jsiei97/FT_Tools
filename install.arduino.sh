@@ -36,9 +36,26 @@ target="$PWD/$shortname/arduino"
 if [ -f "$target" ]
 then
 	echo ok
-	cd ~/bin || exit 40
-	ln -s $target arduino || exit 41
+    mkdir -p ~/bin/
+    cd ~/bin || exit 40
+
+    if [ ! -f arduino ]
+    then
+        ln -s $target arduino || exit 41
+    fi
 fi
+
+
+sudo usermod -aG dialout $USER
+sudo usermod -aG plugdev $USER
+
+if [ ! -d /etc/udev/rules.d/45-avrisp.rules ]
+then
+sudo bash <<EOF
+echo 'ATTR{idProduct}=="2104", ATTR{idVendor}=="03eb", MODE="666", GROUP="plugdev"' >> /etc/udev/rules.d/45-avrisp.rules
+EOF
+fi
+
 
 echo "Done...."
 exit 0
