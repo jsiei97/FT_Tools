@@ -20,6 +20,7 @@ For xUbuntu 13.10 this would be
 sudo ./pkg.xUbuntu_desktop.sh
 </pre>
 
+
 == vim ==
 My .vim and .vimrc
 * https://github.com/jsiei97/.vim
@@ -28,6 +29,12 @@ To index the code for ctags and cscope I have a script called tag_view.sh
 run is the base of a fun tech project to index the project.
 * https://github.com/jsiei97/git_bin/blob/master/tag_view.sh
 
+To get those git you can run.
+<pre>
+./get.ft.env.sh
+</pre>
+
+
 == Arduino ==
 To download and install arduino in /opt/arduino, with a symlink in ~/bin.
 
@@ -35,12 +42,18 @@ To download and install arduino in /opt/arduino, with a symlink in ~/bin.
 ./install.arduino.sh
 </pre>
 
-== Fritzing ==
 
+== Fritzing ==
 To download and install arduino in /opt/fritzing, with a symlink in ~/bin.
 
 <pre>
 ./install.fritzing.sh
 </pre>
 
+
+== The project gits ==
+To clone all the FT gits.
+<pre>
+./get.ft.projects.sh
+</pre>
 
