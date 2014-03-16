@@ -31,3 +31,5 @@ get_git jsiei97 FunTechHouse_Regulator
 get_git jsiei97 FunTechHouse_RoomTemperature
 get_git jsiei97 FunTechHouse_Thermostat
 
+get_git jsiei97 FunTechHouse_MQTT2WebServer_Sensor
+
