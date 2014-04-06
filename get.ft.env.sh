@@ -36,3 +36,12 @@ else
     echo '' >> ~/.bashrc
 fi
 
+if [ "0" -eq "`grep '/usr/local/lib' ~/.bashrc | wc -l`" ]
+then
+    echo '' >> ~/.bashrc
+    echo 'export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/lib"' >> ~/.bashrc
+    echo '' >> ~/.bashrc
+fi
+
+
+
