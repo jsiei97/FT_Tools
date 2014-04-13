@@ -1,7 +1,11 @@
 #!/bin/bash
 
-# Adds LC and other misc things
+# Generate sv_SE.UTF-8 and en_GB.UTF-8
+sudo sed -i 's/\# \(sv_SE.UTF-8\)/\1/g' /etc/locale.gen
+sudo sed -i 's/\# \(en_GB.UTF-8\)/\1/g' /etc/locale.gen
+sudo locale-gen
 
+# Adds LC and other misc things
 cat >> ~/.profile << EOF
 
 # Added by FT_Tool
