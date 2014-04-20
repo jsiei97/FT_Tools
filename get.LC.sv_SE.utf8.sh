@@ -12,7 +12,7 @@ cat >> ~/.profile << EOF
 export LC_TIME="sv_SE.utf8"
 export LC_PAPER="sv_SE.utf8"
 export LC_MEASUREMENT="sv_SE.utf8"
-export LC_NUMERIC="sv_SE.utf8"
+export LC_NUMERIC="en_GB.utf8"
 export LC_MONETARY="sv_SE.utf8"
 
 EOF
