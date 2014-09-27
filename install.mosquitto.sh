@@ -1,9 +1,9 @@
 #!/bin/bash
 
 project=~/funtech/mosquitto/
-version=mosquitto-1.3.1
-file=mosquitto-1.3.1.tar.gz
-url=http://mosquitto.org/files/source/mosquitto-1.3.1.tar.gz
+version=mosquitto-1.3.4
+file=mosquitto-1.3.4.tar.gz
+url=http://mosquitto.org/files/source/mosquitto-1.3.4.tar.gz
 
 mkdir -p $project/
 pushd $project || exit 10
