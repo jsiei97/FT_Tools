@@ -1,14 +1,18 @@
 #!/bin/bash
 
-# Adds LC and other misc things
+# Generate sv_SE.UTF-8 and en_GB.UTF-8
+sudo sed -i 's/\# \(sv_SE.UTF-8\)/\1/g' /etc/locale.gen
+sudo sed -i 's/\# \(en_GB.UTF-8\)/\1/g' /etc/locale.gen
+sudo locale-gen
 
+# Adds LC and other misc things
 cat >> ~/.profile << EOF
 
 # Added by FT_Tool
 export LC_TIME="sv_SE.utf8"
 export LC_PAPER="sv_SE.utf8"
 export LC_MEASUREMENT="sv_SE.utf8"
-export LC_NUMERIC="sv_SE.utf8"
+export LC_NUMERIC="en_GB.utf8"
 export LC_MONETARY="sv_SE.utf8"
 
 EOF
