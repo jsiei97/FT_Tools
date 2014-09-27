@@ -37,7 +37,7 @@ shortname=$(echo $name | sed 's/-linux.*//')
 target="$PWD/$shortname/arduino"
 
 # Add /opt/arduino/current/
-if [ -f current ]
+if [ -h current ]
 then
     rm current
 fi
@@ -61,10 +61,12 @@ fi
 sudo usermod -aG dialout $USER
 sudo usermod -aG plugdev $USER
 
-if [ ! -d /etc/udev/rules.d/45-avrisp.rules ]
+ufile="/etc/udev/rules.d/80-avrisp.rules"
+if [ ! -f $ufile ]
 then
 sudo bash <<EOF
-echo 'ATTR{idProduct}=="2104", ATTR{idVendor}=="03eb", MODE="666", GROUP="plugdev"' >> /etc/udev/rules.d/45-avrisp.rules
+echo 'ATTRS{idProduct}=="2104", ATTRS{idVendor}=="03eb", MODE="666", GROUP="plugdev"' >> $ufile
+echo 'ATTRS{idProduct}=="0043", ATTRS{idVendor}=="2341", MODE="666", GROUP="plugdev"' >> $ufile
 EOF
 fi
 
