@@ -12,5 +12,13 @@ apt-get -y install \
 usermod -aG dialout $USER
 usermod -aG plugdev $USER
 
+# Add /opt/arduino/current
+mkdir -p /opt/arduino
+if [ -h /opt/arduino/current ]
+then
+    rm /opt/arduino/current || exit 32
+fi
+ln -s /usr/share/arduino/ /opt/arduino/current || exit 34
+
 echo "Done..."
 exit 0
