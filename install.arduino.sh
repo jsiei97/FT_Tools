@@ -35,6 +35,15 @@ tar xzf $name || exit 30
 
 shortname=$(echo $name | sed 's/-linux.*//')
 target="$PWD/$shortname/arduino"
+
+# Add /opt/arduino/current/
+if [ -f current ]
+then
+    rm current
+fi
+ln -s $shortname current || exit 36
+
+# Add ~/bin/arduino
 if [ -f "$target" ]
 then
 	echo ok
