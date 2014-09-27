@@ -6,10 +6,12 @@ dest=/opt/arduino
 MACHINE_TYPE=`uname -m`
 if [ ${MACHINE_TYPE} == 'x86_64' ]; then
 	# 64-bit stuff here
-	url=http://arduino.googlecode.com/files/arduino-1.0.5-linux64.tgz
+	#url=http://arduino.googlecode.com/files/arduino-1.0.5-linux64.tgz
+    url=http://downloads.arduino.cc/arduino-1.0.6-linux64.tgz
 else
 	# 32-bit stuff here
-	url=http://arduino.googlecode.com/files/arduino-1.0.5-linux32.tgz
+	#url=http://arduino.googlecode.com/files/arduino-1.0.5-linux32.tgz
+    url=http://downloads.arduino.cc/arduino-1.0.6-linux32.tgz
 fi
 
 name=$(basename $url)
@@ -39,10 +41,11 @@ then
     mkdir -p ~/bin/
     cd ~/bin || exit 40
 
-    if [ ! -f arduino ]
+    if [ -f arduino ]
     then
-        ln -s $target arduino || exit 41
+        rm arduino
     fi
+    ln -s $target arduino || exit 41
 fi
 
 
