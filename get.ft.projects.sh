@@ -33,3 +33,5 @@ get_git jsiei97 FunTechHouse_Thermostat
 
 get_git jsiei97 FunTechHouse_MQTT2WebServer_Sensor
 
+get_git jsiei97 MosqAlarm
+
