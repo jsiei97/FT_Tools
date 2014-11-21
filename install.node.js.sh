@@ -2,7 +2,7 @@
 
 # Can you use a package on http://nodejs.org/download/ ?
 #
-# On platforms like the PI we need to build from src, 
+# On platforms like the PI we need to build from src,
 # and that is what this scripts does.
 
 project=~/funtech/node.js/
@@ -32,13 +32,9 @@ fi
 tar xvzf $file || exit 21
 pushd $version || exit 22
 
-
-
-./configure || exit 30
-make -j     || exit 32
-
-#sudo make install || exit 31
-
+./configure --without-ssl || exit 30
+make     || exit 32
+#sudo make install || exit 34
 
 popd
 
