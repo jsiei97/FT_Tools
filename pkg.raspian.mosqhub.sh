@@ -11,7 +11,8 @@ apt-get -y install \
     libcurl4-openssl-dev \
     git git-core xclip \
     vim vim-gtk vim-runtime vim-scripts exuberant-ctags cscope \
-    libssl-dev libc-ares-dev \
+    libssl-dev libc-ares-dev uuid-dev \
+    cmake \
     monit \
     xsltproc docbook-xsl || exit 20
 
