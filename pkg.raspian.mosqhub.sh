@@ -9,7 +9,7 @@ apt-get -y install \
     build-essential \
     qt4-qmake qt4-dev-tools \
     libcurl4-openssl-dev \
-    git git-core xclip \
+    git git-core gitk xclip \
     vim vim-gtk vim-runtime vim-scripts exuberant-ctags cscope \
     libssl-dev libc-ares-dev uuid-dev \
     cmake \
