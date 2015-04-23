@@ -6,12 +6,10 @@ dest=/opt/arduino
 MACHINE_TYPE=`uname -m`
 if [ ${MACHINE_TYPE} == 'x86_64' ]; then
     # 64-bit stuff here
-    #url=http://arduino.googlecode.com/files/arduino-1.0.5-linux64.tgz
-    url='http://arduino.cc/download.php?f=/arduino-1.0.6-linux64.tgz'
+    url='http://arduino.cc/download.php?f=/arduino-1.6.3-linux64.tar.xz'
 else
     # 32-bit stuff here
-    #url=http://arduino.googlecode.com/files/arduino-1.0.5-linux32.tgz
-    url='http://arduino.cc/download.php?f=/arduino-1.0.6-linux32.tgz'
+    url='http://arduino.cc/download.php?f=/arduino-1.6.3-linux32.tar.xz'
 fi
 
 name=$(basename $url)
@@ -31,7 +29,7 @@ then
     wget $url -O $name || exit 21
 fi
 
-tar xzf $name || exit 30
+tar -xJf $name || exit 30
 
 shortname=$(echo $name | sed 's/-linux.*//')
 target="$PWD/$shortname/arduino"
