@@ -6,10 +6,10 @@ dest=/opt/arduino
 MACHINE_TYPE=`uname -m`
 if [ ${MACHINE_TYPE} == 'x86_64' ]; then
     # 64-bit stuff here
-    url='http://arduino.cc/download.php?f=/arduino-1.6.3-linux64.tar.xz'
+    url='http://arduino.cc/download.php?f=/arduino-1.6.4-linux64.tar.xz'
 else
     # 32-bit stuff here
-    url='http://arduino.cc/download.php?f=/arduino-1.6.3-linux32.tar.xz'
+    url='http://arduino.cc/download.php?f=/arduino-1.6.4-linux32.tar.xz'
 fi
 
 name=$(basename $url)
