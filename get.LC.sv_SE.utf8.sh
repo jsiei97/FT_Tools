@@ -5,6 +5,10 @@ sudo sed -i 's/\# \(sv_SE.UTF-8\)/\1/g' /etc/locale.gen
 sudo sed -i 's/\# \(en_GB.UTF-8\)/\1/g' /etc/locale.gen
 sudo locale-gen
 
+# On other systems it seems be a arg?
+#sudo locale-gen sv_SE.UTF-8
+#sudo locale-gen en_GB.UTF-8
+
 # Adds LC and other misc things
 cat >> ~/.profile << EOF
 
