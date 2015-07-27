@@ -17,6 +17,7 @@ git clone git@github.com:jsiei97/libwebsockets.deb.git || exit 22
 
 pushd libwebsockets.deb || exit 23
 git submodule update --init --recursive || exit 24
+#This will build and install libwebsockets.deb
 ./build.sh || exit $?
 popd || exit 29
 
@@ -32,6 +33,7 @@ git clone git@github.com:jsiei97/mosquitto.deb.git mosquitto.deb || exit 82
 
 pushd mosquitto.deb || exit 84
 git submodule update --init --recursive || exit 86
+#This will build and install mosquitto.deb
 ./build.sh || exit $?
 popd
 
