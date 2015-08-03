@@ -11,6 +11,7 @@ apt-get -y install \
     libcurl4-openssl-dev \
     git git-core gitk xclip \
     vim vim-gtk vim-runtime vim-scripts exuberant-ctags cscope \
+    meld diffuse \
     libssl-dev libc-ares-dev uuid-dev \
     cmake \
     monit \
