@@ -6,7 +6,7 @@ apt-get update  || exit 10
 apt-get upgrade || exit 11
 
 apt-get install \
-    build-essential \
+    build-essential cmake \
     vim vim-gtk exuberant-ctags cscope \
     diffuse meld \
     gdb ddd \
