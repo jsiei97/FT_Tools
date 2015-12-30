@@ -43,5 +43,13 @@ then
     echo '' >> ~/.bashrc
 fi
 
+if [ "$(grep ~\/bin ~/.bashrc)" ]
+then
+    echo "bin is in path"
+else
+    echo '' >> ~/.bashrc
+    echo 'export PATH=$PATH:~/bin' >> ~/.bashrc
+    echo '' >> ~/.bashrc
+fi
 
 
