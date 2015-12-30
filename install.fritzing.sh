@@ -10,12 +10,10 @@ dest=/opt/fritzing
 MACHINE_TYPE=`uname -m`
 if [ ${MACHINE_TYPE} == 'x86_64' ]; then
     # 64-bit stuff here
-    #url=http://fritzing.org/download/0.8.7b/linux-64bit/fritzing-0.8.7b.linux.AMD64.tar.bz2
-    url=http://fritzing.org/download/0.9.0b/linux-64bit/fritzing-0.9.0b.linux.AMD64.tar_1.bz2
+    url=http://fritzing.org/download/0.9.2b/linux-64bit/fritzing-0.9.2b.linux.AMD64.tar.bz2
 else
     # 32-bit stuff here
-    #url=http://fritzing.org/download/0.8.7b/linux-32bit/fritzing-0.8.7b.linux.i386.tar.bz2
-    url=http://fritzing.org/download/0.9.0b/linux-32bit/fritzing-0.9.0b.linux.i386.tar_1.bz2
+    url=http://fritzing.org/download/0.9.2b/linux-32bit/fritzing-0.9.2b.linux.i386.tar.bz2
 fi
 
 name=$(basename $url)
@@ -38,7 +36,7 @@ fi
 tar xjf $name || exit 30
 
 #Why add something like _1 in the name???
-shortname=$(basename $name .tar_1.bz2)
+shortname=$(basename $name .tar.bz2)
 target="$PWD/$shortname/Fritzing"
 
 if [ -f "$target" ]
@@ -52,6 +50,9 @@ then
         rm fritzing
     fi
     ln -s $target fritzing || exit 41
+else
+    echo "Error?? No target dir $target"
+
 fi
 
 echo "Done...."
