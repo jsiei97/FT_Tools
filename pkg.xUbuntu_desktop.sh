@@ -7,6 +7,9 @@ apt-get upgrade || exit 11
 
 apt-get install \
     build-essential cmake \
+    libssl-dev libc-ares-dev uuid-dev \
+    libcurl4-openssl-dev \
+    xsltproc docbook-xsl \
     vim vim-gtk exuberant-ctags cscope \
     diffuse meld \
     gdb ddd \
