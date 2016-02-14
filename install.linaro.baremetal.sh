@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Depends on:
+# sudo apt-get install lib32ncurses5
+
 #Installation dir
 dest=/opt/linaro_baremetal
 
