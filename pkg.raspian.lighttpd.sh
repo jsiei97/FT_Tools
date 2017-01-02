@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Raspian lighttpd, 
+# Raspian lighttpd,
 # and the rest to install the funtechhouse webinterface...
 
 # http://www.penguintutor.com/linux/light-webserver
@@ -10,7 +10,7 @@ if [ "x$USER" == 'xroot' ]
 then
     USER=`logname`
     echo "Fix username from root to $USER"
-fi 
+fi
 
 apt-get -y update  || exit 10
 apt-get -y upgrade || exit 11
@@ -31,6 +31,7 @@ service lighttpd force-reload || exit 26
 
 chown -R www-data:www-data /var/www || exit 30
 chmod 775 /var/www                  || exit 32
+chmod g+w -R /var/www/*             || exit 33
 usermod -aG www-data $USER          || exit 34
 
 echo "Done..."
