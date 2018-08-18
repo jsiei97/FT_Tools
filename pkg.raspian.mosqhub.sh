@@ -2,10 +2,10 @@
 
 # Raspian Mosqhub
 
-apt-get -y update  || exit 10
-apt-get -y upgrade || exit 11
+apt -y update  || exit 10
+apt -y upgrade || exit 11
 
-apt-get -y install \
+apt -y install \
     build-essential \
     qt4-qmake qt4-dev-tools \
     libcurl4-openssl-dev \
