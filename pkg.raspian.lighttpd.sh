@@ -12,17 +12,14 @@ then
     echo "Fix username from root to $USER"
 fi
 
-apt-get -y update  || exit 10
-apt-get -y upgrade || exit 11
+apt -y update  || exit 10
+apt -y upgrade || exit 11
 
-apt-get -y install \
+apt -y install \
     lighttpd \
-    php5-cgi \
+    php-cgi \
+    php-common php \
     || exit 20
-
-apt-get -y install \
-    php5-common php5 \
-    || exit 22
 
 # Do I need MySQL? mysql-server php5-mysql
 
